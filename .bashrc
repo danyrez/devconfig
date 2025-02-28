@@ -25,12 +25,16 @@ alias br='bun dev'
 # Alias para ejecutar los comandos de git
 alias gi='git init'
 
+# Alias para ver la rama
+alias gco='git checkout'
+
 # Alias para agregar y hacer commit
 alias gaa='git add .'
 alias gcm='git commit -m'
 
 # Alias para hacer push y pull
 alias gp='git push origin'
+alias gpu='git push -u origin'
 alias gpl='git pull'
 
 # Alias para clonar repositorios
