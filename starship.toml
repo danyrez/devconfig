@@ -1,0 +1,55 @@
+format = """
+$username\
+$hostname\
+$directory\
+$nodejs\
+$git_branch\
+$git_state\
+$git_status\
+$cmd_duration\
+$line_break\
+$python\
+$character"""
+
+[directory]
+style = "blue bold"
+truncation_length = 1
+truncate_to_repo = true
+
+[nodejs]
+format = "[ 📦 $version ]($style)"
+style = "green bold"
+detect_files = ["package.json", "node_modules"]
+
+[git_branch]
+format = "[$branch]($style)"
+style = "white bold"
+
+[character]
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+style = "cyan"
+conflicted = "⚠️"
+untracked = "?"
+modified = ""
+staged = "✔️"
+renamed = "➡️"
+deleted = "❌"
+stashed = "📦"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black italic"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "yellow bold"
+
+[python]
+format = "[ $virtualenv]($style) "
+symbol = "🐍"
+style = "bright-black bold"
